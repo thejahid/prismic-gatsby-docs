@@ -1,20 +1,22 @@
-import React, { Fragment} from "react"
-import PropTypes from "prop-types"
+import React from "react"
 import Navbar from "./navbar/navbar"
-import Footer from "./footer/footer"
 
 const Layout = ({ children }) => {
   return (
-    <Fragment>
-      <Navbar />
-        {children}
-      <Footer />
-    </Fragment>
+    <div className="d-flex" id="wrapper">
+        <Navbar />
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <span className="bclick" onClick={() => {
+                  document.getElementById("wrapper").classList.toggle("toggled")
+                }}></span>
+            </nav>
+            <div className="container-fluid">
+                {children}
+            </div>
+        </div>
+    </div>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

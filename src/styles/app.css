@@ -1,4 +1,103 @@
-/* ---- Navbar ---- */
-.scroll {
-    background: black;
+body {
+    overflow-x: hidden;
+    transition: margin .25s ease-out;
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin .25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 3px 18px;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+
+.navbar {
+    height: 20px;
 }
+.bclick {
+    width: 12px;
+    height: 12px;
+    background: rgba(0,0,0,.075);
+    border-radius: 40px;
+    cursor: pointer;
+
+}
+.bclick:hover {
+    background: tomato;
+}
+.alink {
+    font-size: 13px;
+}
+.head1 {
+    font-size: 15px;
+    margin: 0;
+}
+.date {
+    font-size: 12px;
+}
+h5 {
+    font-size: 14px;
+    font-weight: 300;
+}
+.title {
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+pre {
+  background: #e9ecef;
+  padding: 15px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:991px) {
+    .navbar {
+        height: 28px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }

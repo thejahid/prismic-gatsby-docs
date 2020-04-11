@@ -1,10 +1,10 @@
 import React, { Fragment} from "react"
-import Nav2 from "./nav/nav2"
+import Navme from "./nav/navme"
 
 const Navbar = () => {
   return (
     <Fragment>
-      <Nav2 />
+      <Navme />
     </Fragment>
   )
 }
