@@ -1,6 +1,5 @@
 body {
     overflow-x: hidden;
-    transition: margin .25s ease-out;
   }
   
   #sidebar-wrapper {
@@ -10,19 +9,16 @@ body {
   }
   
   #sidebar-wrapper .sidebar-heading {
-    color: #000;
+    color: #fff;
     font-size: 15px;
     font-weight: 500;
-    padding: 3px 18px;
-  }
+    padding: 1px 12px;
+}
   
   #sidebar-wrapper .list-group {
     width: 15rem;
   }
   
-  #page-content-wrapper {
-    min-width: 100vw;
-  }
   
   #wrapper.toggled #sidebar-wrapper {
     margin-left: 0;
@@ -35,36 +31,58 @@ body {
 .bclick {
     width: 12px;
     height: 12px;
-    background: rgba(0,0,0,.075);
+    background: rgb(211, 211, 211);
     border-radius: 40px;
     cursor: pointer;
 
 }
 .bclick:hover {
-    background: tomato;
+    background: #ffc107;
 }
 .alink {
     font-size: 13px;
 }
 .head1 {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
 }
 .date {
-    font-size: 12px;
+    font-size: 10px;
 }
-h5 {
-    font-size: 14px;
-    font-weight: 300;
+h5,span,p,h1,h2,h3,h4,h6 {
+    font-size: 13px;
+    text-transform: capitalize;
 }
 .title {
     border-bottom: 1px solid #e9ecef;
     margin-bottom: 20px;
     margin-top: 3px;
 }
+.djitems {
+  color: #e9ecef;
+  padding: 1px 12px;
+  font-size: 12px;
+  border: none;
+}
+.djitems:hover {
+  color: #bebcbc;
+}
 pre {
-  background: #e9ecef;
-  padding: 15px 30px;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #bac2cb;
+  background: #000;
+}
+.catahead {
+  padding-left: 12px;
+  font-size: 12px;
+  color: #fff;
+  padding: 0px 8px;
+  border: 1px solid #f8f9fa78;
+  border-radius: 3px;
+  margin: 10px;
+  
 }
 
 
@@ -73,12 +91,15 @@ pre {
 
 
 
-
-
-
-
-
-
+.toggled #page-content-wrapper {
+  margin-left: 0px;
+  transition: margin .25s ease-out;
+}
+#page-content-wrapper {
+  width: 100%;
+  margin-left: 240px;
+  transition: margin .25s ease-out
+}
 
 
 @media (min-width:991px) {
@@ -92,12 +113,12 @@ pre {
       margin-left: 0;
     }
   
-    #page-content-wrapper {
-      min-width: 0;
-      width: 100%;
-    }
+    
   
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
   }
+  #sidebar-wrapper {
+    width: 240px;
+}

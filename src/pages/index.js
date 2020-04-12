@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout"
 
 const IndexPage = () => (
     <Layout>
-        frrrr
+        The docs website for @developerjahid.
     </Layout>
 )
 

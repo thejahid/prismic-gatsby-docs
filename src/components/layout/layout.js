@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <div className="d-flex" id="wrapper">
         <Navbar />
         <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 <span className="bclick" onClick={() => {
                   document.getElementById("wrapper").classList.toggle("toggled")
                 }}></span>

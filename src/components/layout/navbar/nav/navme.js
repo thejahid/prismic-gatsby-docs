@@ -1,48 +1,17 @@
-import React, { Component} from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-import Navitem from "./navitem"
+import React from "react"
+import { Link } from "gatsby"
+import Ccollapse from "./catagories/c-collapse"
+import Cbootstarp from "./catagories/c-bootstarp"
+import Cprismic from "./catagories/c-prismic"
 
-class Navme extends Component {
-    render() {
-
-        const { data } = this.props;
-        const { edges: docs } = data.allPrismicDocs;
-
-        return(
-            <div className="bg-light border-right" id="sidebar-wrapper">
-                <Link className="sidebar-heading">Developer Jahid</Link>
-                <div className="list-group list-group-flush">
-                    {
-                        docs.map(({ node: doc }) => (
-                                <Navitem url={doc.slugs} id={doc.id} name={doc.data.title.text}   />
-                            )
-                        )
-                    }
-                </div>
-            </div>
-        )
-    }
+const Navme = () => {
+    return(
+        <div className="bg-dark position-fixed" id="sidebar-wrapper">
+            <Link className="sidebar-heading">Developer Jahid</Link>
+            <Ccollapse name="Bootstarp" cComponent={ <Cbootstarp /> } />
+            <Ccollapse name="Prismic" cComponent={ <Cprismic /> } />
+        </div>
+    )
 }
 
-export default () => (
-    <StaticQuery
-      query={graphql`
-          query MyQuery {
-            allPrismicDocs {
-                edges {
-                  node {
-                    slugs
-                    id
-                    data {
-                        title {
-                          text
-                        }
-                    }
-                  }
-               }
-            }  
-          }    
-      `}
-      render={(data, count) => <Navme data={data} count={count} />}
-    />
-  )
+export default Navme;
