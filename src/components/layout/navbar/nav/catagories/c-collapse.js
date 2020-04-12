@@ -1,18 +1,10 @@
-import React, { useState, Children } from "react"
-import { Collapse } from 'reactstrap';
+import React from "react"
 
 const Ccollapse = props => {
-
-    const [isOpen, setIsOpen] = useState(true);
-    const toggle = () => setIsOpen(!isOpen);
-
-
     return(
         <div className="catalist">
-        <div onClick={toggle} className="catahead">{props.name}</div>
-            <Collapse isOpen={isOpen}>
-                {props.cComponent}
-            </Collapse>
+        <div className="catahead">{props.name}</div>
+            {props.cComponent}
         </div>
     )
 }

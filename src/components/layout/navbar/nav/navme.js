@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Ccollapse from "./catagories/c-collapse"
 import Cbootstarp from "./catagories/c-bootstarp"
 import Cprismic from "./catagories/c-prismic"
+import Cmailchimp from "./catagories/c-mailchimp"
 
 const Navme = () => {
     return(
@@ -10,6 +11,7 @@ const Navme = () => {
             <Link className="sidebar-heading">Developer Jahid</Link>
             <Ccollapse name="Bootstarp" cComponent={ <Cbootstarp /> } />
             <Ccollapse name="Prismic" cComponent={ <Cprismic /> } />
+            <Ccollapse name="Mailchimp" cComponent={ <Cmailchimp /> } />
         </div>
     )
 }
