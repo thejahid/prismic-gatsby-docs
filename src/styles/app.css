@@ -101,6 +101,41 @@ pre {
   margin-left: 240px;
   transition: margin .25s ease-out
 }
+.card {
+  margin-top: .75rem;
+}
+.card-title {
+  font-size: 12px;
+  color: #000;
+}
+.card-subtitle {
+  font-size: 10px;
+  color: #000;
+}
+.searchbox {
+  width: 400px;
+}
+.indexform {
+  display: flex;
+  margin-top: .75rem;
+  justify-content: space-between;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+.catagoryform {
+  width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width:991px) {
