@@ -3,6 +3,9 @@ require("dotenv").config({
   path: `.env`,
 })
 
+//reqire algolia queries
+const queries = require('./src/utils/algolia');
+
 
 
 //module
@@ -43,14 +46,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-algolia',
+      resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
-        chunkSize: 10000
-      }
+        chunkSize: 10000, // default: 1000
+        }
     },
 
   ],
