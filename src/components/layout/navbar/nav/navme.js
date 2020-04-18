@@ -4,6 +4,7 @@ import Ccollapse from "./catagories/c-collapse"
 import Cbootstarp from "./catagories/c-bootstarp"
 import Cprismic from "./catagories/c-prismic"
 import Cmailchimp from "./catagories/c-mailchimp"
+import Cnetlify from "./catagories/c-netlify"
 
 const Navme = () => {
     return(
@@ -12,6 +13,7 @@ const Navme = () => {
             <Ccollapse name="Bootstarp" cComponent={ <Cbootstarp /> } />
             <Ccollapse name="Prismic" cComponent={ <Cprismic /> } />
             <Ccollapse name="Mailchimp" cComponent={ <Cmailchimp /> } />
+            <Cnetlify name="Mailchimp" cComponent={ <Cnetlify /> } />
         </div>
     )
 }
