@@ -13,7 +13,7 @@ const Navme = () => {
             <Ccollapse name="Bootstarp" cComponent={ <Cbootstarp /> } />
             <Ccollapse name="Prismic" cComponent={ <Cprismic /> } />
             <Ccollapse name="Mailchimp" cComponent={ <Cmailchimp /> } />
-            <Cnetlify name="Mailchimp" cComponent={ <Cnetlify /> } />
+            <Cnetlify name="Netlify" cComponent={ <Cnetlify /> } />
         </div>
     )
 }
