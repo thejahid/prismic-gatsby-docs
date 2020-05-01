@@ -15,9 +15,10 @@ body {
     padding: 1px 12px;
 }
   
-  #sidebar-wrapper .list-group {
-    width: 15rem;
-  }
+#sidebar-wrapper .list-group {
+  width: 15rem;
+  margin-top: 15px;
+}
   
   
   #wrapper.toggled #sidebar-wrapper {
@@ -85,7 +86,12 @@ pre {
   margin: 10px;
   
 }
-
+.sidelist {
+  padding: 2px 0px;
+  border: 1px solid #949393;
+  border-radius: 3px;
+  margin: 3px 10px;
+}
 
 
 
